@@ -1,3 +1,4 @@
+itsdangerous
 django
 django-rest-auth
 djangorestframework
