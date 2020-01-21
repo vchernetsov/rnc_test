@@ -1,0 +1,6 @@
+{% load i18n %}<div style="font-size: 20px; text-align: center;">
+<p>Some agreement template</p> 
+<p style="font-size: 15px;"> {{ user.first_name|safe }} - {{ user.last_name }} </p>
+<p> {{ user.street }} - {{ user.post_code }} </p>
+<p style="font-size: 15px;"> Dated: {{ timestamp|date:"DATETIME_FORMAT" }} </p>
+</div>

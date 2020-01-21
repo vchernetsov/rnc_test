@@ -1,0 +1,8 @@
+django
+django-rest-auth
+djangorestframework
+djangorestframework-jwt
+envparse
+gunicorn
+psycopg2-binary
+pytz

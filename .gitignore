@@ -1,0 +1,5 @@
+data/
+source/static/
+source/media/
+__pycache__
+*.pyc

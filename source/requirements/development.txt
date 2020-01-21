@@ -1,0 +1,5 @@
+faker
+flake8
+pylint-django
+pylint-fail-under
+tblib

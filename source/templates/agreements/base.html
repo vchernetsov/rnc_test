@@ -1,0 +1,29 @@
+{% extends "admin/base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% include template_name %}
+
+{% block content %}
+    <div id="content-main">
+        {{ form.text.value|safe }}
+        <form method="POST" action="{% url 'sign-agreement-action' %}">
+            {{ form.text }}
+            {{ form.signature }}
+            {{ form.timestamp }}
+            {% csrf_token %}
+            <hr>
+            <br>
+            <input type="submit" class="button" name="sign" value="{% trans "Sign Agreement" %}">
+        </form>
+    </div>
+
+
+{% endblock %}
